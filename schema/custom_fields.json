@@ -1,0 +1,79 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"name",
+    "dbType": "string,127",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"type",
+    "dbType": "string,56",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"disabled",
+    "dbType": "boolean",
+    "htmlType": "boolean"
+  },
+  {
+    "name":"required",
+    "dbType": "boolean",
+    "htmlType": "boolean"
+  },
+  {
+    "name":"in_table",
+    "dbType": "boolean",
+    "htmlType": "boolean"
+  },
+  {
+    "name":"bootstrap_column",
+    "dbType": "tinyInteger",
+    "htmlType": "number",
+    "validations": "min:1|max:12"
+  },
+  {
+    "name":"order",
+    "dbType": "tinyInteger",
+    "htmlType": "number"
+  },
+  {
+    "name": "custom_field_model",
+    "dbType": "string,127",
+    "htmlType":"select,Users:App/Models/User",
+    "validations": "required"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

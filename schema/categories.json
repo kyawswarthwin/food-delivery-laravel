@@ -1,0 +1,56 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"name",
+    "dbType": "string,127",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"image",
+    "dbType": "string",
+    "htmlType": "file",
+    "fillable": false,
+    "searchable": false,
+    "inForm": true,
+    "orderable" :false,
+    "exportable": false,
+    "printable": false
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,Food,category_id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

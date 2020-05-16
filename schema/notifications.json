@@ -1,0 +1,62 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"title",
+    "dbType": "string,255",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name": "notification_type_id",
+    "title": "notification_type.type",
+    "dbType": "integer:unsigned:foreign,notification_types,id",
+    "htmlType": "select,$notificationType",
+    "validations": "required|exists:notification_types,id",
+    "relation": "mt1,NotificationType,notification_type_id,id"
+  },
+  {
+    "name": "user_id",
+    "title": "user.name",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "select,$user",
+    "validations": "required|exists:users,id",
+    "relation": "mt1,User,user_id,id"
+  },
+  {
+    "name":"read",
+    "dbType": "boolean",
+    "htmlType": "boolean"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

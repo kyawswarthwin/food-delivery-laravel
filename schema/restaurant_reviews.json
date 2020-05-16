@@ -1,0 +1,61 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"review",
+    "dbType": "text",
+    "htmlType": "textarea"
+  },
+  {
+    "name":"rate",
+    "dbType": "unsignedTinyInteger",
+    "htmlType": "number"
+  },
+  {
+    "name": "user_id",
+    "title": "user.name",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "select,$user",
+    "validations": "required|exists:users,id",
+    "relation": "mt1,User,user_id,id"
+  },
+  {
+    "name": "restaurant_id",
+    "title": "restaurant.name",
+    "dbType": "integer:unsigned:foreign,restaurants,id",
+    "htmlType": "select,$restaurant",
+    "validations": "required|exists:restaurants,id",
+    "relation": "mt1,Restaurant,restaurant_id,id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

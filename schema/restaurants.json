@@ -1,0 +1,108 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"name",
+    "dbType": "string,127",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"description",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "validations": "required",
+    "inIndex": false
+  },
+  {
+    "name":"image",
+    "dbType": "string",
+    "htmlType": "file",
+    "fillable": false,
+    "searchable": false,
+    "inForm": true,
+    "orderable" :false,
+    "exportable": false,
+    "printable": false
+  },
+  {
+    "name":"address",
+    "dbType": "string,255",
+    "htmlType": "text"
+  },
+  {
+    "name":"latitude",
+    "dbType": "string,24",
+    "htmlType": "text",
+    "inIndex": false
+  },
+  {
+    "name":"longitude",
+    "dbType": "string,24",
+    "htmlType": "text",
+    "inIndex": false
+  },
+  {
+    "name":"phone",
+    "dbType": "string,50",
+    "htmlType": "text"
+  },
+  {
+    "name":"mobile",
+    "dbType": "string,50",
+    "htmlType": "text"
+  },
+  {
+    "name":"information",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "inIndex": false
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,Food,restaurant_id"
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,Gallery,restaurant_id"
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,RestaurantsReview,restaurant_id"
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,User,user_id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

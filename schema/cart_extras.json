@@ -1,0 +1,16 @@
+[
+  {
+    "name": "extra_id",
+    "dbType": "integer:unsigned:foreign,extras,id",
+    "htmlType": "number",
+    "validations": "exists:extras,id",
+    "primary": true
+  },
+  {
+    "name": "cart_id",
+    "dbType": "integer:unsigned:foreign,carts,id",
+    "htmlType": "number",
+    "validations": "exists:carts,id",
+    "primary": true
+  }
+]

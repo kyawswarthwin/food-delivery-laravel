@@ -1,0 +1,62 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "user_id",
+    "title": "user.name",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "select,$user",
+    "validations": "required|exists:users,id",
+    "relation": "mt1,User,user_id,id"
+  },
+  {
+    "name": "order_status_id",
+    "title": "orderStatus.status",
+    "dbType": "integer:unsigned:foreign,order_statuses,id",
+    "htmlType": "select,$orderStatus",
+    "validations": "required|exists:order_statuses,id",
+    "relation": "mt1,OrderStatus,order_status_id,id"
+  },
+  {
+    "name":"tax",
+    "dbType": "double,5,2:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name":"hint",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "inIndex": false
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": true,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"name",
+    "dbType": "string,191",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"email",
+    "dbType": "string,191",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"password",
+    "dbType": "string,191",
+    "htmlType": "text",
+    "validations": "required",
+    "inIndex": false
+  },
+  {
+    "name":"api_token",
+    "dbType": "string,60",
+    "htmlType": "text",
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "store_id",
+    "title": "store.name",
+    "dbType": "integer:unsigned:foreign,stores,id",
+    "htmlType": "select,$store",
+    "validations": "required|exists:stores,id",
+    "relation": "mt1,Store,store_id,id"
+  },
+  {
+    "name": "role_id",
+    "title": "role.name",
+    "dbType": "integer:unsigned:foreign,roles,id",
+    "htmlType": "select,$role",
+    "validations": "required|exists:roles,id",
+    "relation": "mt1,Role,role_id,id"
+  },
+  {
+    "name":"remember_token",
+    "dbType": "string,100",
+    "htmlType": "text",
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "user_id",
+    "title": "user.name",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "select,$user",
+    "validations": "required|exists:users,id",
+    "relation": "mt1,User,user_id,id"
+  },
+  {
+    "name": "method",
+    "dbType": "string,127",
+    "htmlType":"select,Bank:bank",
+    "validations": "required"
+  },
+  {
+    "name":"amount",
+    "dbType": "double,9,2:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name": "paid_date",
+    "dbType": "dateTime",
+    "htmlType": "date"
+  },
+  {
+    "name":"note",
+    "dbType": "text",
+    "htmlType": "textarea"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "user_id",
+    "title": "user.name",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "select,$user",
+    "validations": "required|exists:users,id",
+    "relation": "mt1,User,user_id,id"
+  },
+  {
+    "name": "delivery_fee",
+    "dbType": "double,5,2:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name":"total_orders",
+    "dbType": "integer:unsigned:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name":"earning",
+    "dbType": "double,9,2:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name":"available",
+    "dbType": "boolean:default,0",
+    "htmlType": "boolean"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"value",
+    "dbType": "text",
+    "htmlType": "text",
+    "inForm": false,
+    "inIndex": false,
+    "searchable": false
+  },
+  {
+    "name": "custom_field_id",
+    "dbType": "integer:unsigned:foreign,custom_fields,id",
+    "htmlType": "select,1:Ok",
+    "validations": "required|exists:custom_fields,id",
+    "relation": "mt1,CustomField,custom_field_id,id"
+  },
+  {
+    "name": "customizable_type",
+    "dbType": "string,127",
+    "htmlType":"select,User:Users",
+    "validations": "required"
+  },
+  {
+    "name": "customizable_id",
+    "dbType": "integer",
+    "htmlType":"number",
+    "searchable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

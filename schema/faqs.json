@@ -1,0 +1,55 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"question",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "validations": "required"
+  },
+  {
+    "name":"answer",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "validations": "required"
+  },
+  {
+    "name": "faq_category_id",
+    "title": "faqCategory.name",
+    "dbType": "integer:unsigned:foreign,faq_categories,id",
+    "htmlType": "select,$faqCategory",
+    "validations": "required|exists:faq_categories,id",
+    "relation": "mt1,FaqCategory,faq_category_id,id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

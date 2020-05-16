@@ -1,0 +1,60 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"name",
+    "dbType": "string,127",
+    "htmlType": "text"
+  },
+  {
+    "name":"symbol",
+    "dbType": "string,63",
+    "htmlType": "text"
+  },
+  {
+    "name":"code",
+    "dbType": "string,5",
+    "htmlType": "text"
+  },
+  {
+    "name":"decimal_digits",
+    "dbType": "unsignedTinyInteger",
+    "htmlType": "number"
+  },
+  {
+    "name":"rounding",
+    "dbType": "unsignedTinyInteger",
+    "htmlType": "number"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

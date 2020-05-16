@@ -1,0 +1,16 @@
+[
+  {
+    "name": "user_id",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "number",
+    "validations": "exists:users,id",
+    "primary": true
+  },
+  {
+    "name": "restaurant_id",
+    "dbType": "integer:unsigned:foreign,restaurants,id",
+    "htmlType": "number",
+    "validations": "exists:restaurants,id",
+    "primary": true
+  }
+]

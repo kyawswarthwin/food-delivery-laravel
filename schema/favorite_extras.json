@@ -1,0 +1,16 @@
+[
+  {
+    "name": "extra_id",
+    "dbType": "integer:unsigned:foreign,extras,id",
+    "htmlType": "number",
+    "validations": "exists:extras,id",
+    "primary": true
+  },
+  {
+    "name": "favorite_id",
+    "dbType": "integer:unsigned:foreign,favorites,id",
+    "htmlType": "number",
+    "validations": "exists:favorites,id",
+    "primary": true
+  }
+]

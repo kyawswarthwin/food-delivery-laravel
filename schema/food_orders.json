@@ -1,0 +1,71 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"price",
+    "dbType": "double,8,2:default,0",
+    "htmlType": "number",
+    "validations": "required"
+  },
+  {
+    "name":"quantity",
+    "dbType": "integer:unsigned:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name": "food_id",
+    "title": "food.name",
+    "dbType": "integer:unsigned:foreign,foods,id",
+    "htmlType": "select,$food",
+    "validations": "required|exists:foods,id",
+    "relation": "mt1,Food,food_id,id"
+  },
+  {
+    "name": "extras",
+    "title": "extra.name",
+    "dbType": "hidden,mtm",
+    "htmlType":"select,$extra",
+    "relation": "mtm,Extra,extra_orders",
+    "fillable": false,
+    "searchable": false
+  },
+  {
+    "name": "order_id",
+    "title": "order.id",
+    "dbType": "integer:unsigned:foreign,orders,id",
+    "htmlType": "select,$order",
+    "validations": "required|exists:orders,id",
+    "relation": "mt1,Order,order_id,id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

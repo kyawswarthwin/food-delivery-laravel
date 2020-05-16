@@ -1,0 +1,22 @@
+[
+  {
+    "name": "food_order_id",
+    "dbType": "integer:unsigned:foreign,food_orders,id",
+    "htmlType": "number",
+    "validations": "exists:food_orders,id",
+    "primary": true
+  },
+  {
+    "name": "extra_id",
+    "dbType": "integer:unsigned:foreign,extras,id",
+    "htmlType": "number",
+    "validations": "exists:extras,id",
+    "primary": true
+  },
+  {
+    "name":"price",
+    "dbType": "double,8,2:default,0",
+    "htmlType": "number",
+    "validations": "required"
+  }
+]
